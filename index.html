@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه پایانی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/F68B1Pc.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgba(139, 0, 0, 0.9); /* قرمز تیره */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        .nav-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 2000;
+            color: white;
+            animation: fallIn 3s infinite; /* انیمیشن همبرگر */
+        }
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
             top: 0;
             left: 0;
             background-color: rgba(51, 51, 51, 0.9);
@@ -14,7 +55,7 @@
             transition: 0.3s;
         }
         .sidenav a:hover {
-            color: #4CAF50;
+            color: #8B0000; /* قرمز تیره */
         }
         .sidenav .closebtn {
             position: absolute;
@@ -23,33 +64,14 @@
             font-size: 36px;
             margin-left: 50px;
         }
-        section {
-            padding: 20px;
-            animation: fadeIn 2s;
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-        }
-        h2 {
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        h2 i {
-            margin-left: 10px;
-            color: #4CAF50;
+        @keyframes fallIn {
+            0% {transform: translateY(-100px);}
+            100% {transform: translateY(0);}
         }
     </style>
 </head>
- <body>
-    <header>
+<body>
+<header data-aos="fade-down">
         <h1>پروژه پایانی</h1>
         <span class="nav-toggle" onclick="openNav()">&#9776;</span>
     </header>
@@ -62,12 +84,12 @@
         <a href="contact.html"><i class="fas fa-envelope"></i> تماس</a>
     </div>
     <section>
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <h2><i class="fas fa-info-circle"></i> درباره پروژه</h2>
             <p>این پروژه پایانی شامل مراحل و تکنولوژی‌هایی است که برای ساخت یک وب‌سایت انجام داده‌ایم. هدف اصلی این پروژه، آشنایی با فرآیند توسعه وب و یادگیری تکنولوژی‌های مدرن است.</p>
         </div>
     </section>
-   <footer>
+ <footer>
         <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
     </footer>
 
@@ -85,7 +107,7 @@
         AOS.init();
     </script>
 </body>
-</html>
+</html>           
 
  
 
